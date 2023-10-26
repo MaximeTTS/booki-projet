@@ -173,6 +173,7 @@ a {
     --blue: #0065FC;
     --light-blue: #DEEBFF;
     --grey: #F2F2F2;
+    --white: #FFF;
     --font: 'Raleway', sans-serif;
     --font-size-regular: 16px;   /* Taille standard pour le poids 400 */
     --font-size-medium: 18px;    /* Taille standard pour le poids 500 */
@@ -240,7 +241,7 @@ a {
 
 /* H1 - paragraphe */
 
-.find__hebergement {
+.text__hebergement {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -259,4 +260,61 @@ transform: translateY(-30px);
 font-size: var(--font-size-regular);
 }
 
+/* find__herbergement part button */
+
+* {
+    box-sizing: border-box;
+}
+
+.find__herbergement {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 49px;
+    max-width: 377px;
+    transform: scale(0.8);
+    transform-origin: top left;
+    gap: 24px;
+    border: 1px solid var(--grey);
+    border-radius: 15px;
+    background: var(--white);
+}
+
+.icon__localisation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 49px;
+    flex-shrink: 0;
+    background-color: var(--grey);
+    border-radius: 15px 0px 0px 15px;
+}
+
+.button__recherche {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 15px 16px;
+    height: 49px;
+    border-radius: 0px 15px 15px 0px;
+    border: 1px solid var(--blue);
+    background: var(--blue);
+    color: var(--white);
+    font-size: var(--font-size-medium);
+    font-weight: bold;
+}
+
+.barre__recherche {
+    color: var(--black);
+    font-size: var(--font-size-medium);
+    font-weight: bold;
+    text-align: center;
+    line-height: normal;
+    border: none;
+}
+
+.barre__recherche:focus {
+    outline: none;
+}
 
