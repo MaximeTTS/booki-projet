@@ -235,3 +235,28 @@ a {
 .headernav a:hover::before {
     transform: scaleX(1); /* Barre pleine largeur lors du survol */
 }
+
+/* Section group__info */
+
+/* H1 - paragraphe */
+
+.find__hebergement {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    gap: 8px;
+    font-family: var(--font);
+    color: var(--black);
+}
+
+.title__h1 {
+    font-size: var(--font-size-bold);
+}
+
+.paragraphe__h1 {
+transform: translateY(-30px);
+font-size: var(--font-size-regular);
+}
+
+
