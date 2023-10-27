@@ -359,4 +359,32 @@ font-size: var(--font-size-regular);
     background-color: #DEEBFF;
 }
 
+/* Settings groupe info */
+
+.groupe__info {
+    display: flex;
+    height: 24px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    padding-bottom: 35px;
+}
+
+.incon__info {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid var(--grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text__info {
+    font-size: var(--font-size-regular);
+    font-family: var(--font);
+    line-height: normal;
+    color: var(--black);
+}
+
 
