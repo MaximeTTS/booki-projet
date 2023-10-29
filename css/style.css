@@ -510,3 +510,23 @@ font-size: var(--font-size-regular);
     align-self: stretch;
     border-radius: 20px 20px 0px 0px;
 }
+
+/* Settings footer */
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: var(--grey);
+}
+
+.footer__info {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.strong {
+    font-weight: bold;
+}
