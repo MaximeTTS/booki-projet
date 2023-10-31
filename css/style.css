@@ -164,6 +164,16 @@ a {
 /* Styles pour les écrans plus étroits (max-width: 767.98px) */
 
 @media (max-width: 767.98px) {
+
+    .populaires {
+        margin: 30px 0 0;
+        padding: 20px !important;
+    }
+
+    .hebergements-and-populaires section {
+        border-radius: 0;
+    }
+
     .populaires-cards {
         display: block;
     }
@@ -315,7 +325,6 @@ font-size: var(--font-size-regular);
     align-items: center;
     text-align: center;
     padding: 15px 16px;
-    height: 49px;
     border-radius: 0px 15px 15px 0px;
     border: 1px solid var(--blue);
     background: var(--blue);
@@ -335,6 +344,10 @@ font-size: var(--font-size-regular);
 
 .barre__recherche:focus {
     outline: none;
+}
+
+.icon-recherche {
+    display: none;
 }
 
 /* Settings filtres */
@@ -365,7 +378,7 @@ font-size: var(--font-size-regular);
 .button__filtres {
     display: flex;
     height: 50px;
-    padding: 10px 15px;
+    padding: 4px 19px;
     margin: 0;
     box-sizing: border-box;
     align-items: center;
@@ -376,6 +389,10 @@ font-size: var(--font-size-regular);
     font-size: var(--font-size-regular);
     font-weight: 700;
     line-height: normal;
+}
+
+.fa-solid {
+    font-size: 22px;
 }
 
 .button__filtres:hover,
@@ -617,19 +634,18 @@ font-size: var(--font-size-regular);
     width: 100%;
     height: auto;
     }
-
-
 }
-
-
 
 /* Styles pour les écrans plus étroits (max-width: 767.98px) */
 
 @media (max-width: 767.98px) {
-
+    
     .main-container {
-        width: 100%;
-        padding: 0px 0px;
+        padding: 0 0;
+    }
+
+    .group__info{
+        padding: 0 20px;
     }
 
     .populaires {
@@ -643,6 +659,7 @@ font-size: var(--font-size-regular);
 
     .container__hebergement {
         grid-template-columns: 1fr;
+        gap: 15px;
     }
 
     .bulle__hebergement {
@@ -660,6 +677,11 @@ font-size: var(--font-size-regular);
     height: auto;
     }
 
+    .hebergements {
+        margin: 15px 0 0;
+        padding: 20px !important;
+        background-color: white !important;
+    }
 
     /* Activités à Marseille */
     .container__activity {
@@ -702,6 +724,7 @@ font-size: var(--font-size-regular);
         flex-direction: column;
         align-items: center;
         height: auto;
+        margin-bottom: 30px;
     }
 
     .headerlogo {
@@ -719,7 +742,8 @@ font-size: var(--font-size-regular);
 
     .headernav a {
         transform: translateY(0);
-        padding: 5px 0;
+        padding: 0 0;
+        font-size: 14px;
     }
 
     .headernav a::before {
@@ -727,14 +751,62 @@ font-size: var(--font-size-regular);
         bottom: 0; 
     }
 
-    .filtres__button {
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 20px 10px; /* Espacement vertical de 20px et horizontal de 10px */
+    .find__herbergement {
+        height: 49px;
+        width: 335px;
+        gap: 0;
     }
 
+    .text-recherche {
+        display: none;
+    }
+
+    .icon-recherche {
+        display: inline-block;
+    }
+
+    .button__recherche {
+        border-radius: 15px;
+    }
+    
+    .icon__localisation, .barre__recherche, .button__recherche {
+        flex-shrink: 1;
+    }
+
+    .filtres__button {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    
     .button__filtres {
-        flex-basis: calc(50% - 5px);
+        flex-basis: calc(50% - 10px);
+        font-size: 14px;
+        padding: 4px 8px;
+        box-sizing: border-box;
+        display: flex; 
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .fa-solid {
+        font-size: 16px;
+    }
+
+    .groupe__info {
+        margin-top: 110px;
+    }
+
+    .incon__info {
+        width: 50px;
+    }
+
+    .title__h1 {
+        font-size: 18px;
+    }
+
+    .paragraphe__h1 {
         font-size: 14px;
     }
 }
