@@ -161,10 +161,32 @@ a {
     }
 }
 
-/* Small devices (phones, less than 768px) */
+/* Styles pour les écrans plus étroits (max-width: 767.98px) */
+
 @media (max-width: 767.98px) {
-    /* ... */
+    .populaires-cards {
+        display: block;
+    }
+
+    .populaires-cards .card {
+        margin-top: 15px;
+    }
+
+    .populaires-cards img {
+        width: 111px;
+        height: 146px; 
+    }
+
+    .populaires-cards .card-content {
+        width: 100%;
+        height: 146px;
+    }
+
+    .card-rating {
+        size: 16px;
+    }
 }
+
 
 /* root */
 
@@ -343,7 +365,9 @@ font-size: var(--font-size-regular);
 .button__filtres {
     display: flex;
     height: 50px;
-    padding: 4px 19px;
+    padding: 10px 15px;
+    margin: 0;
+    box-sizing: border-box;
     align-items: center;
     gap: 10px;
     border-radius: 25px;
@@ -428,6 +452,8 @@ font-size: var(--font-size-regular);
 
 .image__hebergement {
     height: 124px;
+    width: 100%;
+    box-sizing: border-box;
     object-fit: cover; 
     align-self: stretch;
     border: 5px solid var(--white);
@@ -436,6 +462,7 @@ font-size: var(--font-size-regular);
 
 .bulle__content {
     display: flex;
+    width: 96%;
     padding: 0 15px;
     flex-direction: column;
     align-items: flex-start;
@@ -533,20 +560,6 @@ font-size: var(--font-size-regular);
     font-weight: bold;
 }
 
-/* Styles pour les écrans plus étroits (max-width: 1024px) */
-
-/* Filtre and Button */
-
-.filtres {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 35px;
-}
-
-.span__filtres {
-    gap: 20px;
-}
-
 
 /* Acvitity Marseille */
 
@@ -573,5 +586,156 @@ font-size: var(--font-size-regular);
         align-self: stretch;
         margin: 0%;
         height: 70px;
+    }
+
+    /* Filtre and Button */
+
+    .filtres {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 35px;
+    }
+    
+    .span__filtres {
+        gap: 20px;
+    }
+
+    .container__hebergement {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .bulle__hebergement {
+        border-radius: 20px;
+        height: auto;
+    }
+
+    .image__hebergement {
+        height: 124px;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .bulle__texte {
+    width: 100%;
+    height: auto;
+    }
+
+
+}
+
+
+
+/* Styles pour les écrans plus étroits (max-width: 767.98px) */
+
+@media (max-width: 767.98px) {
+
+    .main-container {
+        width: 100%;
+        padding: 0px 0px;
+    }
+
+    .populaires {
+        order: 1;
+    }
+    .hebergements {
+        order: 2;
+    }
+
+    /* Hébergement à Marseille */
+
+    .container__hebergement {
+        grid-template-columns: 1fr;
+    }
+
+    .bulle__hebergement {
+        border-radius: 20px;
+        height: auto;
+    }
+
+    .image__hebergement {
+        height: 124px;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .bulle__texte {
+    width: 100%;
+    height: auto;
+    }
+
+
+    /* Activités à Marseille */
+    .container__activity {
+        grid-template-columns: 1fr;
+    }
+
+    .bulle__activity {
+        border-radius: 20px;
+        width: 100%;
+        height: auto;
+        margin-top: 15px;
+    }
+
+    .activity__image {
+        width: 100%;
+        height: 141px;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .activity__h3 {
+        padding-left: 19px;
+        font-size: 16px;
+        height: 59px;
+    }
+
+    /* Footer */
+
+    .footer {
+        display: block; /* Afficher les éléments du footer en bloc (un en dessous de l'autre) */
+    }
+
+    .footer__info {
+        text-align: center; /* Centrer le texte */
+        margin-top: 15px; /* Ajouter un espace entre les éléments */
+    }
+
+    /* Header */
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .headerlogo {
+        padding: 30px;
+        order: 1;
+    }
+
+    .headerlogo img {
+        padding-top: 0;
+    }
+
+    .headernav {
+        order: 2;
+    }
+
+    .headernav a {
+        transform: translateY(0);
+        padding: 5px 0;
+    }
+
+    .headernav a::before {
+        top: auto;
+        bottom: 0; 
+    }
+
+    .filtres__button {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px 10px; /* Espacement vertical de 20px et horizontal de 10px */
+    }
+
+    .button__filtres {
+        flex-basis: calc(50% - 5px);
+        font-size: 14px;
     }
 }
