@@ -391,7 +391,7 @@ font-size: var(--font-size-regular);
     line-height: normal;
 }
 
-.fa-solid {
+.fa-solid:not(.fa-xs) {
     font-size: 22px;
 }
 
@@ -686,6 +686,7 @@ font-size: var(--font-size-regular);
     /* Activités à Marseille */
     .container__activity {
         grid-template-columns: 1fr;
+        gap: 5px;
     }
 
     .bulle__activity {
@@ -790,7 +791,7 @@ font-size: var(--font-size-regular);
         gap: 8px;
     }
     
-    .fa-solid {
+    .fa-solid:not(.fa-xs) {
         font-size: 16px;
     }
 
