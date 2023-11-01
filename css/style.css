@@ -15,6 +15,7 @@
 
 body {
     display: flex;
+    margin: 0;
     justify-content: center;
 }
 
@@ -193,7 +194,7 @@ a {
     }
 
     .card-rating {
-        size: 16px;
+        font-size: 16px;
     }
 }
 
@@ -215,12 +216,13 @@ a {
 
 /* header */
 
-.header{
+.header {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     width: 100%;
     height: 79px;
-    margin-bottom: 30px; /* mon gap */
+    margin-bottom: 30px;
 }
 
 .headerlogo img {
@@ -232,16 +234,7 @@ a {
 
 .headernav {
     display: flex;
-    align-items: center;
     gap: 70px;
-}
-
-.headernav a {
-    display: inline-block;
-    color: var(--black);
-    font-family: var(--font);
-    font-size: var(--font-size-regular);
-    transform: translateY(-30px); /* Permet de regler la hauteur de mes a */
 }
 
 .headernav a:hover {
@@ -250,24 +243,23 @@ a {
 
 .headernav a {
     position: relative;
-    padding: 5px 0; /* Un peu d'espace pour la barre */
-    transition: all 0.3s ease; /* Animation douce */
+    padding: 5px 0; 
 }
 
 .headernav a::before {
-    content: ""; /* Obligatoire pour les pseudo-éléments */
+    content: "";
     position: absolute;
-    top: 0; /* Place la barre au-dessus du lien */
+    top: 0; 
     left: 0;
-    right: 0; /* Prend toute la largeur du lien */
-    height: 2px; /* Hauteur de la barre */
-    background-color: var(--blue); /* Couleur de la barre */
-    transform: scaleX(0); /* Barre initialement invisible */
-    transition: transform 0.3s ease; /* Animation douce */
+    right: 0; 
+    height: 2px;
+    background-color: transparent;
+    transform: scaleX(0);
 }
 
 .headernav a:hover::before {
-    transform: scaleX(1); /* Barre pleine largeur lors du survol */
+    background-color: var(--blue);
+    transform: scaleX(1);
 }
 
 /* Section group__info */
@@ -744,6 +736,8 @@ font-size: var(--font-size-regular);
         transform: translateY(0);
         padding: 0 0;
         font-size: 14px;
+        margin-top: 10px;
+        padding: 10px 0;
     }
 
     .headernav a::before {
