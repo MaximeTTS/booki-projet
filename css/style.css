@@ -459,7 +459,7 @@ font-size: var(--font-size-regular);
     align-items: center;
     padding-bottom: 15px;
     width: 100%;
-    height: 207.25px;
+    height: 100%;
     gap: 4px;
     flex: 1 0 0;
     border-radius: 20px;
@@ -479,7 +479,7 @@ font-size: var(--font-size-regular);
 
 .bulle__content {
     display: flex;
-    width: 96%;
+    box-sizing: border-box;
     padding: 0 15px;
     flex-direction: column;
     align-items: flex-start;
@@ -622,7 +622,6 @@ font-size: var(--font-size-regular);
 
     .bulle__hebergement {
         border-radius: 20px;
-        height: auto;
     }
 
     .image__hebergement {
