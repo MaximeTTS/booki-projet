@@ -403,16 +403,6 @@ font-size: var(--font-size-regular);
     padding-bottom: 35px;
 }
 
-.incon__info {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    border: 1px solid var(--grey);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .text__info {
     font-size: var(--font-size-regular);
     font-family: var(--font);
@@ -790,10 +780,6 @@ font-size: var(--font-size-regular);
 
     .groupe__info {
         margin-top: 110px;
-    }
-
-    .incon__info {
-        width: 50px;
     }
 
     .title__h1 {
