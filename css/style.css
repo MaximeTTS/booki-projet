@@ -254,7 +254,6 @@ a {
     right: 0; 
     height: 2px;
     background-color: transparent;
-    transform: scaleX(0);
 }
 
 .headernav a:hover::before {
@@ -722,17 +721,18 @@ font-size: var(--font-size-regular);
         order: 2;
     }
 
-    .headernav a {
-        transform: translateY(0);
-        padding: 0 0;
-        font-size: 14px;
-        margin-top: 10px;
-        padding: 10px 0;
+    .headernav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        text-align: center;
+        grid-gap: 0;
     }
 
     .headernav a::before {
         top: auto;
-        bottom: 0; 
+        bottom: 0;
+        background-color: #F2F2F2; 
     }
 
     .find__herbergement {
