@@ -290,9 +290,9 @@ font-size: var(--font-size-regular);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 49px;
+    height: 49px; /* Exemple de hauteur modifiée */
     max-width: 377px;
-    transform: scale(0.8);
+    zoom: 80%;
     transform-origin: top left;
     gap: 24px;
     border: 1px solid var(--grey);
@@ -300,12 +300,15 @@ font-size: var(--font-size-regular);
     background: var(--white);
 }
 
+.icon__localisation, .button__recherche, .barre__recherche {
+    height: 100%; /* Prend la hauteur totale de .find__herbergement */
+}
+
 .icon__localisation {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 50px;
-    height: 49px;
     flex-shrink: 0;
     background-color: var(--grey);
     border-radius: 15px 0px 0px 15px;
@@ -327,6 +330,7 @@ font-size: var(--font-size-regular);
 .barre__recherche {
     color: var(--black);
     font-size: var(--font-size-medium);
+    background-color: tra;
     font-weight: bold;
     text-align: center;
     line-height: normal;
@@ -340,6 +344,8 @@ font-size: var(--font-size-regular);
 .icon-recherche {
     display: none;
 }
+
+
 
 /* Settings filtres */
 
@@ -736,8 +742,7 @@ font-size: var(--font-size-regular);
     }
 
     .find__herbergement {
-        height: 49px;
-        width: 335px;
+        max-width: 100%;
         gap: 0;
     }
 
@@ -758,14 +763,12 @@ font-size: var(--font-size-regular);
     }
 
     .filtres__button {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
     }
     
     .button__filtres {
-        flex-basis: calc(50% - 10px);
         font-size: 14px;
         padding: 4px 8px;
         box-sizing: border-box;
